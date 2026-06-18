@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Murmely - Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for the Murmely mobile application.">
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #fffdfc;
+      --surface: #f6f0ff;
+      --surface-strong: #efe7fb;
+      --ink: #21113f;
+      --muted: #6b5680;
+      --accent: #7c5ce6;
+      --accent-soft: #d9c9ff;
+      --line: #eadff4;
+      --safe: #237a57;
+      --warning: #8b4961;
+      --white: #ffffff;
+      --shadow: 0 18px 55px rgba(52, 28, 86, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 18% 10%, rgba(217, 201, 255, 0.45), transparent 30%),
+        radial-gradient(circle at 88% 18%, rgba(246, 221, 234, 0.58), transparent 28%),
+        var(--background);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(1040px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 34px 22px 24px;
+    }
+
+    .logo {
+      width: 94px;
+      height: 94px;
+      margin: 0 auto 18px;
+      border-radius: 999px;
+      background: linear-gradient(145deg, #f8eaf4, #ede4ff);
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow);
+      color: var(--accent);
+      font-size: 34px;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 999px;
+      padding: 7px 13px;
+    }
+
+    .stars {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 16px;
+      align-items: center;
+      margin: 20px 0 28px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .stars::before,
+    .stars::after {
+      content: "";
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--line), transparent);
+    }
+
+    .summary {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .summary h2 {
+      margin-top: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    section.full {
+      grid-column: 1 / -1;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 20px 0 8px;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .notice {
+      border-left: 4px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: #fbf8ff;
+      color: var(--muted);
+    }
+
+    .retention-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 16px;
+      font-size: 0.96rem;
+    }
+
+    .retention-table th,
+    .retention-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .retention-table th {
+      background: var(--surface-strong);
+      color: var(--ink);
+    }
+
+    .retention-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 34px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 780px) {
+      .page {
+        width: min(100% - 22px, 1040px);
+        padding-top: 24px;
+      }
+
+      .hero {
+        padding: 24px 8px 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section.full {
+        grid-column: auto;
+      }
+
+      .retention-table,
+      .retention-table thead,
+      .retention-table tbody,
+      .retention-table th,
+      .retention-table td,
+      .retention-table tr {
+        display: block;
+      }
+
+      .retention-table thead {
+        display: none;
+      }
+
+      .retention-table tr {
+        border-bottom: 1px solid var(--line);
+        padding: 12px 0;
+      }
+
+      .retention-table td {
+        border: 0;
+        padding: 6px 0;
+      }
+
+      .retention-table td::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="logo" aria-hidden="true">&#10022;</div>
+      <h1>Murmely Privacy Policy</h1>
+      <p class="subtitle">
+        Murmely is a mobile application designed to help people start calmer, consent-based conversations
+        around a chosen discussion topic. This policy explains what data is processed, why it is processed,
+        and how long it is kept.
+      </p>
+      <div class="meta" aria-label="Policy metadata">
+        <span class="pill">Last updated: June 18, 2026</span>
+        <span class="pill">Application: Murmely</span>
+        <span class="pill">Package: be.huygebaertgabriel.murmely</span>
+      </div>
+    </header>
+
+    <div class="stars" aria-hidden="true">&#10022; &#10023; &#10022;</div>
+
+    <article class="summary">
+      <h2>Short version</h2>
+      <p>
+        Murmely only processes data required to operate the service: account data, optional profile data,
+        featured discussion topics, discussion requests, questionnaire answers, consent decisions,
+        conversations, safety reports, blocks, contact requests and technical logs.
+      </p>
+      <p>
+        Murmely does not sell personal data and does not use personal data for targeted advertising.
+      </p>
+      <p class="notice">
+        Some conversation content is protected at rest in the database. However, when a report is submitted
+        or moderation is required, the administrator may access the information necessary to review the report
+        and protect users.
+      </p>
+    </article>
+
+    <div class="grid">
+      <section>
+        <h2>1. Data controller</h2>
+        <p>
+          Murmely is administered by its creator. The creator is responsible for the technical operation
+          of the application, account management, support requests and moderation follow-up.
+        </p>
+        <p>
+          For privacy-related requests, you may use the in-app contact form when logged in, or contact:
+          <a href="mailto:contact@huygebaertgabriel.be">contact@huygebaertgabriel.be</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Legal basis</h2>
+        <p>Murmely processes personal data on the following legal bases:</p>
+        <ul>
+          <li><strong>Contractual necessity</strong>, to create an account, authenticate users and provide the core service.</li>
+          <li><strong>Legitimate interest</strong>, to secure the service, prevent abuse, maintain stability and process reports.</li>
+          <li><strong>Legal obligation</strong>, if a competent authority requires information under applicable law.</li>
+          <li><strong>User choice</strong>, for optional profile fields that users decide to complete.</li>
+        </ul>
+      </section>
+
+      <section class="full">
+        <h2>3. Data processed by Murmely</h2>
+
+        <h3>Account and authentication data</h3>
+        <p>
+          Murmely stores a username, normalized username, email address, normalized email address,
+          user role, hashed password, creation date and update date. Passwords are not stored in plain text.
+        </p>
+        <p>
+          Authentication uses access tokens and refresh tokens. Refresh tokens are stored only as hashes
+          on the server side.
+        </p>
+
+        <h3>Optional profile data</h3>
+        <p>
+          Users may choose to provide an age, biography, social energy, relational expectations and personality tags.
+          These fields help other users understand the context of an exchange. They are optional unless explicitly
+          required by a specific feature.
+        </p>
+
+        <h3>Featured discussion topics and questionnaires</h3>
+        <p>
+          When a user creates a featured discussion topic, Murmely stores its title, description, selected image,
+          questionnaire questions, answer options and the creator's selected answers. This allows other users to
+          understand the topic before deciding whether they are interested.
+        </p>
+
+        <h3>Discussion requests and mutual consent</h3>
+        <p>
+          When a user indicates interest in a topic, Murmely stores a discussion request, its status,
+          questionnaire answers and consent decisions. A conversation is created only when both participants consent.
+        </p>
+
+        <h3>Conversations and messages</h3>
+        <p>
+          When a conversation is opened, Murmely stores the conversation and messages exchanged between participants.
+          This allows users to continue the exchange later. Message content is protected at rest in the database
+          to reduce direct exposure of conversation data.
+        </p>
+
+        <h3>Safety, blocks and reports</h3>
+        <p>
+          Murmely stores user blocks, user reports, report reasons, report source information and moderation status.
+          This is necessary to prevent blocked users from restarting interactions and to allow reports to be reviewed.
+        </p>
+
+        <h3>Contact requests</h3>
+        <p>
+          Murmely stores contact requests submitted from the application, including the selected request type,
+          message, status and processing date. This can include requests about personal data or account deletion.
+        </p>
+
+        <h3>Technical logs</h3>
+        <p>
+          Murmely stores technical logs to diagnose errors, investigate incidents and maintain service stability.
+          Logs may include technical routes, response status, execution time, correlation identifiers and diagnostic
+          information. Logs should not contain passwords, message content, biographies or report reasons in plain text.
+        </p>
+      </section>
+
+      <section class="full">
+        <h2>4. Retention periods</h2>
+        <table class="retention-table">
+          <thead>
+            <tr>
+              <th>Data category</th>
+              <th>Retention period</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Data category">Account data</td>
+              <td data-label="Retention period">Kept while the account is active.</td>
+              <td data-label="Reason">Required to provide access to the application and identify the user's space.</td>
+            </tr>
+            <tr>
+              <td data-label="Data category">Profile data</td>
+              <td data-label="Retention period">Kept while the account is active, unless the user edits or requests deletion.</td>
+              <td data-label="Reason">Required to display the profile context chosen by the user.</td>
+            </tr>
+            <tr>
+              <td data-label="Data category">Access tokens</td>
+              <td data-label="Retention period">30 minutes.</td>
+              <td data-label="Reason">Short-lived authentication token used to access the API.</td>
+            </tr>
+            <tr>
+              <td data-label="Data category">Refresh tokens</td>
+              <td data-label="Retention period">Up to 30 days, unless revoked earlier.</td>
+              <td data-label="Reason">Used to keep a session active without asking the user to log in repeatedly.</td>
+            </tr>
+            <tr>
+              <td data-label="Data category">Password reset codes</td>
+              <td data-label="Retention period">30 minutes. Previous active codes are invalidated when a new request is created.</td>
+              <td data-label="Reason">Limits the validity window of account recovery codes.</td>
+            </tr>
+            <tr>
+              <td data-label="Data category">Technical logs</td>
+              <td data-label="Retention period">Maximum 30 days, except where needed for security, abuse investigation or legal requirements.</td>
+              <td data-label="Reason">Allows troubleshooting and incident investigation without keeping logs indefinitely.</td>
+            </tr>
+            <tr>
+              <td data-label="Data category">Reports and blocks</td>
+              <td data-label="Retention period">Kept as long as needed to protect users, prevent repeated abuse and document moderation decisions.</td>
+              <td data-label="Reason">Required for safety and moderation consistency.</td>
+            </tr>
+            <tr>
+              <td data-label="Data category">Conversations and messages</td>
+              <td data-label="Retention period">Kept while the account and conversation are active, unless deletion is requested or retention is required for moderation or legal reasons.</td>
+              <td data-label="Reason">Required to display conversation history and support moderation where applicable.</td>
+            </tr>
+            <tr>
+              <td data-label="Data category">Contact requests</td>
+              <td data-label="Retention period">Kept as long as needed to process and document the request.</td>
+              <td data-label="Reason">Required for support, privacy requests and follow-up.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>5. Hosting and processors</h2>
+        <p>
+          Murmely may use Render to host the API and PostgreSQL database infrastructure. In that context,
+          Render acts as a technical hosting provider and processes data only to provide the infrastructure
+          required for the service.
+        </p>
+        <p>
+          Murmely may also use an email provider to send operational emails, such as password reset messages.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Security measures</h2>
+        <p>
+          Murmely uses authentication tokens, hashed passwords, server-side secrets, refresh token revocation,
+          short-lived password reset codes and database-level protection for conversation message content.
+        </p>
+        <p>
+          No security measure is absolute. Murmely applies reasonable technical measures proportionate to the
+          current alpha stage of the service.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Sensitive data</h2>
+        <p>
+          Murmely does not intentionally request sensitive data such as ethnic origin, political opinions,
+          religion, health data, sexual orientation or biometric data.
+        </p>
+        <p>
+          Some fields are free text, such as biography, topics, messages, reports and contact requests.
+          Users should avoid entering sensitive information in those fields.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. User rights</h2>
+        <p>
+          Subject to applicable law, users may request access to their personal data, rectification, deletion,
+          restriction of processing, portability or objection to certain processing based on legitimate interest.
+        </p>
+        <p>
+          Account deletion is not yet fully automated in the application. Users may request account or data deletion
+          through the in-app contact form or by contacting the address listed in this policy.
+        </p>
+      </section>
+
+      <section class="full">
+        <h2>9. Moderation access</h2>
+        <p>
+          Murmely is built around mutual consent and safer exchanges. If a user reports another user, a conversation,
+          or a featured topic, the administrator may review the information necessary to assess the report.
+        </p>
+        <p>
+          This review may include profile information, the reported topic, report reason, conversation context,
+          and messages relevant to the report. This access is limited to moderation, user safety, abuse prevention
+          and legal compliance.
+        </p>
+      </section>
+
+      <section class="full">
+        <h2>10. Changes to this policy</h2>
+        <p>
+          This policy may be updated as Murmely evolves, especially before a wider production release.
+          Material changes will be reflected on this page by updating the date at the top.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <p>Murmely - calm, consent-based conversations.</p>
+    </footer>
+  </main>
+</body>
+</html>
