@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Murmely - Et ensuite ?</title>
+  <meta name="description" content="Roadmap sobre de Murmely : stabilisation de l'alpha, confort mobile, sécurité, modération et prochaines améliorations prévues.">
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #fffdfc;
+      --surface: #f6f0ff;
+      --surface-strong: #efe7fb;
+      --ink: #21113f;
+      --muted: #6b5680;
+      --accent: #7c5ce6;
+      --accent-soft: #d9c9ff;
+      --green: #277a55;
+      --green-soft: #e7f7ed;
+      --rose-soft: #fff0f6;
+      --line: #eadff4;
+      --white: #ffffff;
+      --shadow: 0 18px 55px rgba(52, 28, 86, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 16% 8%, rgba(217, 201, 255, 0.46), transparent 30%),
+        radial-gradient(circle at 88% 18%, rgba(246, 221, 234, 0.58), transparent 28%),
+        radial-gradient(circle at 50% 88%, rgba(231, 247, 237, 0.58), transparent 30%),
+        var(--background);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 64px;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 42px;
+    }
+
+    .brand {
+      color: var(--accent);
+      font-weight: 900;
+      text-decoration: none;
+      font-size: 1.05rem;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(52, 28, 86, 0.08);
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+    }
+
+    .hero {
+      max-width: 880px;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--surface-strong);
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 7vw, 5.7rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.12rem, 2.2vw, 1.36rem);
+    }
+
+    .notice {
+      margin: 28px 0 42px;
+      padding: 20px 22px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--accent);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      color: var(--muted);
+    }
+
+    .notice strong {
+      color: var(--ink);
+    }
+
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 44px;
+    }
+
+    .roadmap-card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .roadmap-card.focus {
+      background: linear-gradient(145deg, rgba(246, 240, 255, 0.96), rgba(255, 248, 251, 0.96));
+    }
+
+    .roadmap-card.safety {
+      background: linear-gradient(145deg, rgba(231, 247, 237, 0.96), rgba(255, 255, 255, 0.94));
+    }
+
+    .roadmap-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+
+    .roadmap-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .roadmap-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .roadmap-card li + li {
+      margin-top: 8px;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--surface-strong);
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .pill.green {
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .closing {
+      text-align: center;
+      background: linear-gradient(145deg, #f6f0ff, #fff8fb);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 32px 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .closing h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.7rem, 4vw, 2.55rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+
+    .closing p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 34px;
+      font-size: 0.92rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    @media (max-width: 820px) {
+      .page {
+        width: min(100% - 22px, 1080px);
+      }
+
+      .roadmap-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="presentation.html">Murmely</a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="button" href="presentation.html">Présentation</a>
+        <a class="button" href="presentation.html#releases">Releases</a>
+        <a class="button primary" href="presentation.html#releases">Rejoindre l'alpha</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <span class="eyebrow">Et ensuite ?</span>
+      <h1>Ce qui est prévu pour la suite</h1>
+      <p class="intro">
+        Murmely avance par petites étapes. La priorité est de stabiliser l'alpha fermée,
+        de réduire les frictions mobiles, puis d'ajouter les outils nécessaires pour garder
+        un cadre clair et maîtrisable.
+      </p>
+    </section>
+
+    <div class="notice">
+      <strong>Pas de calendrier public ici.</strong>
+      Cette page donne la direction actuelle du projet. Elle peut évoluer selon les retours
+      des testeurs, les contraintes techniques et les besoins réellement observés pendant l'alpha.
+    </div>
+
+    <section class="roadmap-grid" aria-label="Roadmap Murmely">
+      <article class="roadmap-card focus">
+        <div class="status-row">
+          <span class="pill green">En cours</span>
+          <span class="pill">Alpha fermée</span>
+        </div>
+        <h2>Stabiliser l'expérience mobile</h2>
+        <p>
+          La première priorité est de rendre l'application plus confortable sur les téléphones
+          réels, pas seulement dans un scénario idéal.
+        </p>
+        <ul>
+          <li>Améliorer le mode clair, notamment autour des images et des fonds difficiles à lire.</li>
+          <li>Rendre les écrans basse résolution et les grands zooms plus utilisables.</li>
+          <li>Limiter les cas où le clavier Android masque les actions importantes.</li>
+          <li>Réduire les éléments visuels trop grands dans la création du sujet phare.</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card">
+        <div class="status-row">
+          <span class="pill">Prévu</span>
+          <span class="pill">Navigation</span>
+        </div>
+        <h2>Rendre les parcours plus directs</h2>
+        <p>
+          Plusieurs écrans doivent être plus évidents, avec moins de détours et moins de boutons
+          qui apparaissent hors contexte.
+        </p>
+        <ul>
+          <li>Clarifier les tags de demandes et retirer les indicateurs inutiles.</li>
+          <li>Afficher plus clairement l'autre personne dans les conversations récentes.</li>
+          <li>Permettre d'ouvrir une demande ou une conversation directement depuis les cartes d'accueil.</li>
+          <li>Ajouter un geste d'actualisation naturel sur mobile.</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card">
+        <div class="status-row">
+          <span class="pill">Prévu</span>
+          <span class="pill">Onboarding</span>
+        </div>
+        <h2>Mieux guider les nouveaux utilisateurs</h2>
+        <p>
+          L'alpha montre qu'il faut mieux expliquer quoi faire après la création du compte
+          et comment démarrer proprement.
+        </p>
+        <ul>
+          <li>Revoir l'onboarding après l'inscription pour orienter vers le profil et le sujet phare.</li>
+          <li>Mettre davantage en avant le sujet phare sur l'accueil.</li>
+          <li>Expliquer plus clairement qu'un seul sujet phare actif peut être utilisé à la fois.</li>
+          <li>Rendre les tags communs plus explicites que par la couleur seule.</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card">
+        <div class="status-row">
+          <span class="pill">Prévu</span>
+          <span class="pill">Ergonomie</span>
+        </div>
+        <h2>Simplifier les écrans d'édition</h2>
+        <p>
+          Les écrans riches doivent être plus faciles à remplir sur mobile, surtout quand le clavier
+          et les listes longues entrent en jeu.
+        </p>
+        <ul>
+          <li>Revoir la création du sujet phare avec une logique par étapes.</li>
+          <li>Revoir les réponses au QCM avec une progression plus lisible.</li>
+          <li>Améliorer l'édition des attentes relationnelles et des traits de personnalité.</li>
+          <li>Ajouter une réponse libre courte dans le QCM quand les choix proposés ne suffisent pas.</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card safety">
+        <div class="status-row">
+          <span class="pill green">Prévu</span>
+          <span class="pill green">Contrôle</span>
+        </div>
+        <h2>Donner plus de contrôle à l'utilisateur</h2>
+        <p>
+          Murmely doit rester simple, mais l'utilisateur doit pouvoir gérer son compte et comprendre
+          ce qui se passe sans dépendre d'une intervention manuelle.
+        </p>
+        <ul>
+          <li>Permettre la suppression du compte directement depuis l'application.</li>
+          <li>Conserver les identifiants de manière plus confortable entre deux ouvertures.</li>
+          <li>Permettre de consulter le profil de l'autre personne depuis une conversation.</li>
+          <li>Permettre de supprimer une demande tant que le QCM n'a pas encore été rempli.</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card safety">
+        <div class="status-row">
+          <span class="pill green">Prévu</span>
+          <span class="pill green">Modération</span>
+        </div>
+        <h2>Renforcer la modération et le suivi</h2>
+        <p>
+          Les outils de sécurité existent déjà dans l'alpha, mais leur traitement doit devenir
+          plus lisible et moins dépendant d'opérations techniques.
+        </p>
+        <ul>
+          <li>Créer un espace administrateur pour consulter les signalements.</li>
+          <li>Créer un espace administrateur pour suivre les contacts et suggestions utilisateurs.</li>
+          <li>Permettre à l'utilisateur de voir ses signalements et leur état de traitement.</li>
+          <li>Permettre à l'utilisateur de suivre ses échanges avec l'administration.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="closing">
+      <h2>Une roadmap volontairement sobre</h2>
+      <p>
+        Le but n'est pas d'empiler des fonctionnalités. Le but est de rendre l'alpha plus stable,
+        plus lisible et plus sûre avant d'ouvrir Murmely plus largement.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        Murmely - conversations calmes, consenties et choisies.
+        · <a href="presentation.html">Présentation</a>
+        · <a href="privacy.html">Confidentialité</a>
+        · <a href="account-deletion.html">Suppression de compte</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
