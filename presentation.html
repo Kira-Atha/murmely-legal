@@ -106,6 +106,118 @@
       box-shadow: 0 10px 24px rgba(52, 28, 86, 0.08);
     }
 
+    .release-list {
+      display: grid;
+      gap: 18px;
+      margin: 18px 0 44px;
+    }
+
+    .release-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .release-card:hover,
+    .release-card:focus-visible {
+      border-color: var(--accent-soft);
+      outline: 3px solid rgba(124, 92, 230, 0.18);
+      outline-offset: 3px;
+    }
+
+    .release-card h3,
+    .release-detail h3 {
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+
+    .release-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .release-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: var(--surface-strong);
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .release-arrow {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: var(--accent);
+      color: var(--white);
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+
+    .release-detail {
+      background: linear-gradient(145deg, rgba(246, 240, 255, 0.96), rgba(255, 248, 251, 0.96));
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      margin-bottom: 44px;
+    }
+
+    .release-detail p {
+      color: var(--muted);
+    }
+
+    .release-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .release-block {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .release-block h4 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+    }
+
+    .release-block ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .release-block li + li {
+      margin-top: 6px;
+    }
+
     .button.primary {
       background: var(--accent);
       color: var(--white);
@@ -304,8 +416,17 @@
       }
 
       .grid,
-      .story {
+      .story,
+      .release-columns {
         grid-template-columns: 1fr;
+      }
+
+      .release-card {
+        grid-template-columns: 1fr;
+      }
+
+      .release-arrow {
+        justify-self: start;
       }
 
       .page {
@@ -326,6 +447,7 @@
         </p>
         <div class="actions">
           <a class="button primary" href="#fonctionnement">Découvrir le principe</a>
+          <a class="button" href="#releases">Voir les releases</a>
           <a class="button" href="privacy.html">Politique de confidentialité</a>
         </div>
       </div>
@@ -481,6 +603,99 @@
           </p>
         </article>
       </div>
+    </section>
+
+    <section id="releases">
+      <div class="section-title">
+        <h2>Releases</h2>
+        <p>
+          Les versions de Murmely sont résumées ici avec des mots simples :
+          ce qui change, ce que l'utilisateur peut tester, et les limites connues.
+        </p>
+      </div>
+
+      <div class="release-list">
+        <a class="release-card" href="#release-alpha-1">
+          <div>
+            <div class="release-meta">
+              <span class="pill">Alpha 1</span>
+              <span class="pill">Test fermé</span>
+              <span class="pill">Première version publiée</span>
+            </div>
+            <h3>Première alpha de Murmely</h3>
+            <p>
+              La première version testable pose le parcours complet :
+              créer son compte, préparer son profil, découvrir un sujet,
+              répondre au QCM, consentir, puis ouvrir une conversation.
+            </p>
+          </div>
+          <span class="release-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <article id="release-alpha-1" class="release-detail">
+        <div class="release-meta">
+          <span class="pill">Alpha 1</span>
+          <span class="pill">Android</span>
+          <span class="pill">Test fermé Google Play</span>
+        </div>
+        <h2>Première alpha de Murmely</h2>
+        <p>
+          Cette première release permet de tester le coeur de Murmely :
+          des échanges qui commencent par un sujet, passent par une intention claire,
+          puis ne deviennent une conversation que si les deux personnes sont d'accord.
+        </p>
+
+        <div class="release-columns">
+          <section class="release-block">
+            <h3>Ce que tu peux tester</h3>
+            <ul>
+              <li>Créer un compte et te connecter avec ton e-mail ou ton pseudo.</li>
+              <li>Compléter ton profil : pseudo, âge, bio, énergie sociale, attentes et traits de personnalité.</li>
+              <li>Créer ton sujet phare avec une image, une description et un petit QCM.</li>
+              <li>Découvrir les sujets des autres personnes et dire si un sujet t'intéresse.</li>
+              <li>Répondre au QCM, relire tes réponses et consulter l'avancement d'une demande.</li>
+              <li>Donner ou refuser ton consentement avant l'ouverture d'une conversation.</li>
+              <li>Discuter dans une conversation consentie, avec indication des nouveaux messages.</li>
+            </ul>
+          </section>
+
+          <section class="release-block">
+            <h3>Ce qui protège le cadre</h3>
+            <ul>
+              <li>Une conversation ne s'ouvre pas sans consentement mutuel.</li>
+              <li>Tu peux passer un sujet qui ne te parle pas.</li>
+              <li>Tu peux bloquer ou signaler une personne si nécessaire.</li>
+              <li>Tu peux signaler un sujet si son contenu pose problème.</li>
+              <li>Les messages sont chiffrés en base de données.</li>
+              <li>Les pages légales, la confidentialité et les demandes de suppression sont disponibles.</li>
+            </ul>
+          </section>
+
+          <section class="release-block">
+            <h3>Ce qui a été préparé techniquement</h3>
+            <ul>
+              <li>API déployée pour les tests fermés.</li>
+              <li>Authentification JWT et réinitialisation de mot de passe par e-mail.</li>
+              <li>Persistance PostgreSQL des profils, sujets, demandes et conversations.</li>
+              <li>SignalR pour les messages en temps réel.</li>
+              <li>Journalisation technique et identifiant de corrélation côté API.</li>
+              <li>Pipeline de build Android pour générer l'artefact de test.</li>
+            </ul>
+          </section>
+
+          <section class="release-block">
+            <h3>Limites connues</h3>
+            <ul>
+              <li>Cette version est réservée au test fermé.</li>
+              <li>Les notifications push ne sont pas encore disponibles.</li>
+              <li>Les outils d'administration et de modération restent limités.</li>
+              <li>La suppression automatique de compte n'est pas encore active : elle passe par une demande.</li>
+              <li>L'ergonomie continue d'être ajustée pour les grands zooms et les petits écrans.</li>
+            </ul>
+          </section>
+        </div>
+      </article>
     </section>
 
     <section class="closing">

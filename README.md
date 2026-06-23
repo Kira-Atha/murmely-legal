@@ -1,16 +1,14 @@
-<h1>Murmely Legal Pages</h1>
+# Murmely Public Pages
 
+Public pages for the Murmely mobile application.
 
+## Main Pages
 
-<p>Public legal pages for the Murmely mobile application.</p>
+- [Application presentation](presentation.html)
+- [Privacy policy](privacy.html)
+- [Account deletion](account-deletion.html)
 
+## Releases
 
-
-<ul>
-
-&#x20; <li><a href="privacy.html">Privacy Policy</a></li>
-
-&#x20; <li><a href="account-deletion.html">Account Deletion</a></li>
-
-</ul>
+- [Alpha 1 - First closed testing release](presentation.html#release-alpha-1)
 
