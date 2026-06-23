@@ -106,6 +106,79 @@
       box-shadow: 0 10px 24px rgba(52, 28, 86, 0.08);
     }
 
+    .alpha-signup {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 22px;
+      align-items: center;
+      margin: 18px 0 28px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .alpha-signup h3 {
+      margin: 0 0 8px;
+      font-size: 1.32rem;
+      line-height: 1.25;
+    }
+
+    .alpha-signup p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .alpha-signup-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .alpha-signup-form label {
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .alpha-signup-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+    }
+
+    .alpha-signup input {
+      min-width: 0;
+      min-height: 46px;
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--ink);
+      font: inherit;
+    }
+
+    .alpha-signup input:focus {
+      border-color: var(--accent-soft);
+      outline: 3px solid rgba(124, 92, 230, 0.18);
+    }
+
+    .alpha-signup-note {
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .alpha-signup-status {
+      display: none;
+      margin-top: 2px;
+      color: var(--green);
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .alpha-signup-status.is-visible {
+      display: block;
+    }
+
     .release-list {
       display: grid;
       gap: 18px;
@@ -417,7 +490,12 @@
 
       .grid,
       .story,
+      .alpha-signup,
       .release-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .alpha-signup-row {
         grid-template-columns: 1fr;
       }
 
@@ -614,6 +692,56 @@
         </p>
       </div>
 
+      <div class="alpha-signup">
+        <div>
+          <div class="release-meta">
+            <span class="pill">Alpha fermée</span>
+            <span class="pill">Android</span>
+          </div>
+          <h3>Recevoir une invitation</h3>
+          <p>
+            L'adresse Gmail sert à t'ajouter à la petite liste de test Google Play.
+            Elle permet de rendre l'application visible dans le Play Store pour ton compte
+            et de t'envoyer le lien d'accès à l'alpha fermée.
+          </p>
+        </div>
+
+        <form
+          class="alpha-signup-form"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSfnB06PtPXhqPEO4mbeeTlxAt8kpgwfvKj5by_yL8qttLG8zQ/formResponse"
+          method="post"
+          target="alpha-signup-target"
+          data-alpha-signup-form
+        >
+          <input type="hidden" name="fvv" value="1">
+          <input type="hidden" name="pageHistory" value="0">
+          <input type="hidden" name="fbzx" value="-7244478181383432981">
+          <label for="alpha-gmail">Adresse Gmail</label>
+          <div class="alpha-signup-row">
+            <input
+              id="alpha-gmail"
+              name="entry.1075915098"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              placeholder="prenom@gmail.com"
+              pattern=".+@gmail\.com"
+              title="Utilise une adresse qui se termine par @gmail.com."
+              required
+            >
+            <button class="button primary" type="submit">S'inscrire</button>
+          </div>
+          <p class="alpha-signup-note">
+            Cette adresse est utilisée uniquement pour l'accès à l'alpha fermée
+            et les messages pratiques liés au test.
+          </p>
+          <p class="alpha-signup-status" data-alpha-signup-status>
+            Merci, ton adresse a été envoyée.
+          </p>
+        </form>
+        <iframe name="alpha-signup-target" title="Confirmation d'inscription à l'alpha" hidden></iframe>
+      </div>
+
       <div class="release-list">
         <a class="release-card" href="#release-alpha-1">
           <div>
@@ -714,5 +842,13 @@
       </p>
     </footer>
   </main>
+  <script>
+    const alphaSignupForm = document.querySelector("[data-alpha-signup-form]");
+    const alphaSignupStatus = document.querySelector("[data-alpha-signup-status]");
+
+    alphaSignupForm?.addEventListener("submit", () => {
+      alphaSignupStatus?.classList.add("is-visible");
+    });
+  </script>
 </body>
 </html>
