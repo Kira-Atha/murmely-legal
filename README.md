@@ -6,6 +6,7 @@ Public pages for the Murmely mobile application.
 
 - [Application presentation](presentation.html)
 - [Roadmap](roadmap.html)
+- [Rules](rules.html)
 - [Privacy policy](privacy.html)
 - [Account deletion](account-deletion.html)
 

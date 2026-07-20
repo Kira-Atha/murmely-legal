@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Murmely - Règlement</title>
+  <meta name="description" content="Règlement de Murmely : cadre d'utilisation, comportements interdits, signalements et sanctions possibles.">
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #fffdfc;
+      --surface: #f6f0ff;
+      --surface-strong: #efe7fb;
+      --safe-surface: #eef8f1;
+      --ink: #21113f;
+      --muted: #6b5680;
+      --accent: #7c5ce6;
+      --accent-soft: #d9c9ff;
+      --safe: #247a45;
+      --line: #eadff4;
+      --white: #ffffff;
+      --shadow: 0 18px 55px rgba(52, 28, 86, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 18% 10%, rgba(217, 201, 255, 0.45), transparent 30%),
+        radial-gradient(circle at 88% 18%, rgba(246, 221, 234, 0.58), transparent 28%),
+        radial-gradient(circle at 50% 88%, rgba(231, 247, 237, 0.58), transparent 30%),
+        var(--background);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 34px 22px 24px;
+    }
+
+    .logo {
+      width: 94px;
+      height: 94px;
+      margin: 0 auto 18px;
+      border-radius: 999px;
+      background: linear-gradient(145deg, #f8eaf4, #ede4ff);
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow);
+      color: var(--accent);
+      font-size: 34px;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.3rem, 5.5vw, 4.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 999px;
+      padding: 7px 13px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--accent);
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(52, 28, 86, 0.08);
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: var(--white);
+      border-color: var(--accent);
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      text-decoration: none;
+      border-color: var(--accent-soft);
+      outline: 3px solid rgba(124, 92, 230, 0.18);
+      outline-offset: 2px;
+    }
+
+    .stars {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 16px;
+      align-items: center;
+      margin: 20px 0 28px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .stars::before,
+    .stars::after {
+      content: "";
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--line), transparent);
+    }
+
+    .summary,
+    section {
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .summary {
+      background: var(--surface);
+      margin-bottom: 18px;
+    }
+
+    .summary.safe {
+      background: var(--safe-surface);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    section.full {
+      grid-column: 1 / -1;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+      line-height: 1.25;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .notice {
+      border-left: 4px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: #fbf8ff;
+      color: var(--muted);
+    }
+
+    .safe-note {
+      border-left-color: var(--safe);
+      background: var(--safe-surface);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 34px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 780px) {
+      .page {
+        width: min(100% - 22px, 980px);
+        padding-top: 24px;
+      }
+
+      .hero {
+        padding: 24px 8px 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section.full {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="logo" aria-hidden="true">&#10022;</div>
+      <h1>Règlement Murmely</h1>
+      <p class="subtitle">
+        Un cadre simple pour garder des discussions calmes, respectueuses et consenties.
+      </p>
+      <div class="meta" aria-label="Métadonnées de la page">
+        <span class="pill">Dernière mise à jour : 20 juillet 2026</span>
+        <span class="pill">Application : Murmely</span>
+        <span class="pill">Alpha fermée</span>
+      </div>
+      <div class="actions" aria-label="Navigation principale">
+        <a class="button" href="presentation.html">Présentation</a>
+        <a class="button" href="roadmap.html">Roadmap</a>
+        <a class="button" href="privacy.html">Confidentialité</a>
+        <a class="button primary" href="presentation.html#alpha">Rejoindre l'alpha</a>
+      </div>
+    </header>
+
+    <div class="stars" aria-hidden="true">&#10022; &#10023; &#10022;</div>
+
+    <article class="summary">
+      <h2>En résumé</h2>
+      <p>
+        Murmely est un espace pensé pour ouvrir des discussions calmes, respectueuses et consenties.
+      </p>
+      <p>
+        Tu peux ne pas être d'accord, débattre, refuser une conversation ou poser tes limites.
+        En revanche, l'agressivité, l'humiliation et les attaques personnelles n'ont pas leur place ici.
+      </p>
+    </article>
+
+    <div class="grid">
+      <section class="full">
+        <h2>Comportements interdits</h2>
+        <p>Sont strictement interdits sur Murmely :</p>
+        <ul>
+          <li>les insultes, menaces ou agressions verbales ;</li>
+          <li>le harcèlement, l'acharnement ou les messages répétés non désirés ;</li>
+          <li>les propos racistes, xénophobes, homophobes, transphobes, sexistes ou discriminatoires ;</li>
+          <li>les contenus humiliants, dégradants ou volontairement provocateurs ;</li>
+          <li>les tentatives de manipulation, de pression ou d'intimidation ;</li>
+          <li>le spam, les abus techniques ou l'utilisation détournée de l'application ;</li>
+          <li>tout contenu illégal ou manifestement dangereux.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Désaccords et limites</h2>
+        <p>
+          Ne pas être d'accord est autorisé. Refuser une discussion est autorisé.
+          Changer d'avis est autorisé.
+        </p>
+        <p>
+          Mais insulter quelqu'un parce qu'il n'est pas d'accord, forcer une interaction
+          ou contourner un refus n'est pas acceptable.
+        </p>
+      </section>
+
+      <section>
+        <h2>Signalements</h2>
+        <p>
+          Les utilisateurs peuvent signaler un sujet, un message ou un comportement problématique.
+        </p>
+        <p>
+          Les signalements sont vérifiés par l'administrateur, avec contexte.
+          Un signalement n'entraîne donc pas automatiquement une sanction.
+        </p>
+        <p>
+          Les comportements toxiques répétés ou graves peuvent toutefois mener à une restriction
+          ou à un bannissement du compte.
+        </p>
+      </section>
+
+      <section class="full">
+        <h2>Sanctions</h2>
+        <p>Selon la gravité ou la répétition des faits, Murmely peut :</p>
+        <ul>
+          <li>verrouiller une conversation ;</li>
+          <li>bloquer certaines interactions ;</li>
+          <li>suspendre ou bannir un compte ;</li>
+          <li>conserver les éléments nécessaires à l'analyse d'un signalement pendant la durée utile.</li>
+        </ul>
+      </section>
+    </div>
+
+    <article class="summary safe">
+      <h2>Esprit attendu</h2>
+      <p>
+        Murmely n'est pas un espace de performance sociale. L'objectif est de discuter à son rythme,
+        avec respect, curiosité et consentement mutuel.
+      </p>
+      <p>
+        Ici, on privilégie les échanges posés. La discussion est libre, mais jamais au détriment
+        de la sécurité ou du respect des autres.
+      </p>
+      <p class="notice safe-note">
+        Pour comprendre comment les signalements, messages et données associées peuvent être traités,
+        consulte aussi la <a href="privacy.html">politique de confidentialité</a>.
+      </p>
+    </article>
+
+    <footer>
+      <p>
+        Murmely - conversations calmes, consenties et choisies.
+        · <a href="presentation.html">Présentation</a>
+        · <a href="roadmap.html">Roadmap</a>
+        · <a href="privacy.html">Confidentialité</a>
+        · <a href="account-deletion.html">Suppression de compte</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
