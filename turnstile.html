@@ -98,10 +98,11 @@
   </main>
 
   <script>
-    const DEFAULT_SITE_KEY = "0x4AAAAAAD_JSZeap5imUXJy";
+    const TURNSTILE_SITE_KEY = "0x4AAAAAAD_JSZeap5imUXJy";
+    const PLACEHOLDER_SITE_KEY = "REPLACE_WITH_CLOUDFLARE_TURNSTILE_SITE_KEY";
     const APP_CALLBACK_URL = "murmely://turnstile";
     const params = new URLSearchParams(window.location.search);
-    const siteKey = params.get("sitekey") || DEFAULT_SITE_KEY;
+    const siteKey = params.get("sitekey") || TURNSTILE_SITE_KEY;
     const statusElement = document.getElementById("status");
 
     function setStatus(message, type) {
@@ -153,7 +154,7 @@
     }
 
     function renderTurnstile() {
-      if (siteKey === DEFAULT_SITE_KEY) {
+      if (!siteKey || siteKey === PLACEHOLDER_SITE_KEY) {
         setStatus("Configuration Turnstile manquante.", "error");
         notifyApp("configuration_error", { code: "missing_sitekey" });
         return;
