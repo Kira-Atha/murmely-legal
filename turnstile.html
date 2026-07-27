@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Murmely - Verification</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #fffdfc;
+      --surface: #f6f0ff;
+      --ink: #21113f;
+      --muted: #6b5680;
+      --accent: #7c5ce6;
+      --danger: #a23b54;
+      --line: #eadff4;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--background);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    main {
+      width: min(100%, 380px);
+      display: grid;
+      justify-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 74px;
+      height: 74px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, #f8eaf4, #ede4ff);
+      color: var(--accent);
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.45rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .turnstile-box {
+      min-height: 70px;
+      display: grid;
+      place-items: center;
+    }
+
+    .status {
+      min-height: 24px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .status.error {
+      color: var(--danger);
+    }
+
+    .status.success {
+      color: var(--accent);
+    }
+  </style>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+</head>
+<body>
+  <main>
+    <div class="logo" aria-hidden="true">&#10022;</div>
+    <h1>Verification</h1>
+    <p>Validation anti-abus en cours.</p>
+    <div id="turnstile-widget" class="turnstile-box"></div>
+    <p id="status" class="status" role="status">Chargement de la verification...</p>
+  </main>
+
+  <script>
+    const DEFAULT_SITE_KEY = "REPLACE_WITH_CLOUDFLARE_TURNSTILE_SITE_KEY";
+    const APP_CALLBACK_URL = "murmely://turnstile";
+    const params = new URLSearchParams(window.location.search);
+    const siteKey = params.get("sitekey") || DEFAULT_SITE_KEY;
+    const statusElement = document.getElementById("status");
+
+    function setStatus(message, type) {
+      statusElement.textContent = message;
+      statusElement.className = `status ${type || ""}`.trim();
+    }
+
+    function notifyApp(type, payload) {
+      const message = {
+        source: "murmely-turnstile",
+        type,
+        payload: payload || {}
+      };
+      const serializedMessage = JSON.stringify(message);
+
+      if (window.chrome?.webview?.postMessage) {
+        window.chrome.webview.postMessage(serializedMessage);
+      }
+
+      if (window.webkit?.messageHandlers?.murmelyTurnstile?.postMessage) {
+        window.webkit.messageHandlers.murmelyTurnstile.postMessage(message);
+      }
+
+      if (window.ReactNativeWebView?.postMessage) {
+        window.ReactNativeWebView.postMessage(serializedMessage);
+      }
+
+      const callbackUrl = new URL(APP_CALLBACK_URL);
+      callbackUrl.searchParams.set("type", type);
+      Object.entries(payload || {}).forEach(([key, value]) => {
+        callbackUrl.searchParams.set(key, value);
+      });
+      window.location.href = callbackUrl.toString();
+    }
+
+    function onTurnstileSuccess(token) {
+      setStatus("Verification terminee.", "success");
+      notifyApp("success", { token });
+    }
+
+    function onTurnstileError(errorCode) {
+      setStatus("Verification impossible. Reessaie dans quelques instants.", "error");
+      notifyApp("error", { code: errorCode || "unknown" });
+    }
+
+    function onTurnstileExpired() {
+      setStatus("Verification expiree. Recharge la page pour recommencer.", "error");
+      notifyApp("expired", {});
+    }
+
+    function renderTurnstile() {
+      if (siteKey === DEFAULT_SITE_KEY) {
+        setStatus("Configuration Turnstile manquante.", "error");
+        notifyApp("configuration_error", { code: "missing_sitekey" });
+        return;
+      }
+
+      if (!window.turnstile) {
+        window.setTimeout(renderTurnstile, 100);
+        return;
+      }
+
+      window.turnstile.render("#turnstile-widget", {
+        sitekey: siteKey,
+        callback: onTurnstileSuccess,
+        "error-callback": onTurnstileError,
+        "expired-callback": onTurnstileExpired
+      });
+      setStatus("Complete la verification pour continuer.");
+    }
+
+    renderTurnstile();
+  </script>
+</body>
+</html>
