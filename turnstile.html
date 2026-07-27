@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Murmely - Verification</title>
+  <title>Murmely - Vérification</title>
   <style>
     :root {
       color-scheme: light;
@@ -91,10 +91,10 @@
 <body>
   <main>
     <div class="logo" aria-hidden="true">&#10022;</div>
-    <h1>Verification</h1>
+    <h1>Vérification</h1>
     <p>Validation anti-abus en cours.</p>
     <div id="turnstile-widget" class="turnstile-box"></div>
-    <p id="status" class="status" role="status">Chargement de la verification...</p>
+    <p id="status" class="status" role="status">Chargement de la vérification...</p>
   </main>
 
   <script>
@@ -139,17 +139,17 @@
     }
 
     function onTurnstileSuccess(token) {
-      setStatus("Verification terminee.", "success");
+      setStatus("Vérification terminée.", "success");
       notifyApp("success", { token });
     }
 
     function onTurnstileError(errorCode) {
-      setStatus("Verification impossible. Reessaie dans quelques instants.", "error");
+      setStatus("Vérification impossible. Réessaie dans quelques instants.", "error");
       notifyApp("error", { code: errorCode || "unknown" });
     }
 
     function onTurnstileExpired() {
-      setStatus("Verification expiree. Recharge la page pour recommencer.", "error");
+      setStatus("Vérification expirée. Recharge la page pour recommencer.", "error");
       notifyApp("expired", {});
     }
 
@@ -171,7 +171,7 @@
         "error-callback": onTurnstileError,
         "expired-callback": onTurnstileExpired
       });
-      setStatus("Complete la verification pour continuer.");
+      setStatus("Complète la vérification pour continuer.");
     }
 
     renderTurnstile();
