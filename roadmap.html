@@ -247,9 +247,9 @@
     <section class="hero">
       <h1>Ce qui est prévu pour la suite</h1>
       <p class="intro">
-        Murmely avance par petites étapes. La priorité est de stabiliser l'alpha fermée,
-        de réduire les frictions mobiles, puis d'ajouter les outils nécessaires pour garder
-        un cadre clair et maîtrisable.
+        Murmely avance par petites étapes. Après la stabilisation de l'alpha fermée,
+        la priorité est de garder un cadre fiable, d'écouter les retours de test,
+        puis d'ouvrir l'accès progressivement.
       </p>
     </section>
 
@@ -263,90 +263,36 @@
       <article class="roadmap-card focus">
         <div class="status-row">
           <span class="pill green">En cours</span>
-          <span class="pill">Alpha fermée</span>
+          <span class="pill">Tests</span>
         </div>
-        <h2>Stabiliser l'expérience mobile</h2>
+        <h2>Écouter les retours de l'alpha</h2>
         <p>
-          La première priorité est de rendre l'application plus confortable sur les téléphones
-          réels, pas seulement dans un scénario idéal.
+          L'objectif immédiat est de comprendre ce qui bloque encore les testeurs dans une
+          utilisation réelle, pas seulement de cocher des fonctionnalités.
         </p>
         <ul>
-          <li>Améliorer le mode clair, notamment autour des images et des fonds difficiles à lire.</li>
-          <li>Rendre les écrans basse résolution et les grands zooms plus utilisables.</li>
-          <li>Limiter les cas où le clavier Android masque les actions importantes.</li>
-          <li>Réduire les éléments visuels trop grands dans la création du sujet phare.</li>
+          <li>Corriger les bugs remontés pendant l'alpha fermée.</li>
+          <li>Repérer les parcours qui restent confus malgré les améliorations déjà publiées.</li>
+          <li>Continuer à ajuster les écrans si certains cas réels restent inconfortables.</li>
+          <li>Garder les changements petits, testables et utiles.</li>
         </ul>
       </article>
 
       <article class="roadmap-card">
         <div class="status-row">
           <span class="pill">Prévu</span>
-          <span class="pill">Navigation</span>
+          <span class="pill">Accès</span>
         </div>
-        <h2>Rendre les parcours plus directs</h2>
+        <h2>Ouvrir progressivement l'accès</h2>
         <p>
-          Plusieurs écrans doivent être plus évidents, avec moins de détours et moins de boutons
-          qui apparaissent hors contexte.
+          Murmely restera en ouverture progressive tant que le cadre, la stabilité et la modération
+          n'ont pas suffisamment de recul.
         </p>
         <ul>
-          <li>Clarifier les tags de demandes et retirer les indicateurs inutiles.</li>
-          <li>Afficher plus clairement l'autre personne dans les conversations récentes.</li>
-          <li>Permettre d'ouvrir une demande ou une conversation directement depuis les cartes d'accueil.</li>
-          <li>Ajouter un geste d'actualisation naturel sur mobile.</li>
-        </ul>
-      </article>
-
-      <article class="roadmap-card">
-        <div class="status-row">
-          <span class="pill">Prévu</span>
-          <span class="pill">Onboarding</span>
-        </div>
-        <h2>Mieux guider les nouveaux utilisateurs</h2>
-        <p>
-          L'alpha montre qu'il faut mieux expliquer quoi faire après la création du compte
-          et comment démarrer proprement.
-        </p>
-        <ul>
-          <li>Revoir l'onboarding après l'inscription pour orienter vers le profil et le sujet phare.</li>
-          <li>Mettre davantage en avant le sujet phare sur l'accueil.</li>
-          <li>Expliquer plus clairement qu'un seul sujet phare actif peut être utilisé à la fois.</li>
-          <li>Rendre les tags communs plus explicites que par la couleur seule.</li>
-        </ul>
-      </article>
-
-      <article class="roadmap-card">
-        <div class="status-row">
-          <span class="pill">Prévu</span>
-          <span class="pill">Ergonomie</span>
-        </div>
-        <h2>Simplifier les écrans d'édition</h2>
-        <p>
-          Les écrans riches doivent être plus faciles à remplir sur mobile, surtout quand le clavier
-          et les listes longues entrent en jeu.
-        </p>
-        <ul>
-          <li>Revoir la création du sujet phare avec une logique par étapes.</li>
-          <li>Revoir les réponses au QCM avec une progression plus lisible.</li>
-          <li>Améliorer l'édition des attentes relationnelles et des traits de personnalité.</li>
-          <li>Ajouter une réponse libre courte dans le QCM quand les choix proposés ne suffisent pas.</li>
-        </ul>
-      </article>
-
-      <article class="roadmap-card safety">
-        <div class="status-row">
-          <span class="pill green">Prévu</span>
-          <span class="pill green">Contrôle</span>
-        </div>
-        <h2>Donner plus de contrôle à l'utilisateur</h2>
-        <p>
-          Murmely doit rester simple, mais l'utilisateur doit pouvoir gérer son compte et comprendre
-          ce qui se passe sans dépendre d'une intervention manuelle.
-        </p>
-        <ul>
-          <li>Permettre la suppression du compte directement depuis l'application.</li>
-          <li>Conserver les identifiants de manière plus confortable entre deux ouvertures.</li>
-          <li>Permettre de consulter le profil de l'autre personne depuis une conversation.</li>
-          <li>Permettre de supprimer une demande tant que le QCM n'a pas encore été rempli.</li>
+          <li>Ajouter des testeurs par petites vagues.</li>
+          <li>Observer si les nouveaux usages restent compatibles avec l'esprit de Murmely.</li>
+          <li>Éviter une ouverture trop large avant d'avoir assez de retours fiables.</li>
+          <li>Adapter la suite selon les problèmes réellement rencontrés.</li>
         </ul>
       </article>
 
@@ -355,16 +301,33 @@
           <span class="pill green">Prévu</span>
           <span class="pill green">Modération</span>
         </div>
-        <h2>Renforcer la modération et le suivi</h2>
+        <h2>Renforcer le suivi des signalements</h2>
         <p>
-          Les outils de sécurité existent déjà dans l'alpha, mais leur traitement doit devenir
-          plus lisible et moins dépendant d'opérations techniques.
+          Les règles et les signalements existent, mais le suivi doit devenir plus lisible
+          et plus facile à gérer.
         </p>
         <ul>
           <li>Créer un espace administrateur pour consulter les signalements.</li>
-          <li>Créer un espace administrateur pour suivre les contacts et suggestions utilisateurs.</li>
-          <li>Permettre à l'utilisateur de voir ses signalements et leur état de traitement.</li>
-          <li>Permettre à l'utilisateur de suivre ses échanges avec l'administration.</li>
+          <li>Faciliter le traitement des situations répétées ou graves.</li>
+          <li>Permettre à l'utilisateur de suivre l'état de ses signalements.</li>
+          <li>Conserver un historique utile sans garder des données inutilement.</li>
+        </ul>
+      </article>
+
+      <article class="roadmap-card">
+        <div class="status-row">
+          <span class="pill">Prévu</span>
+          <span class="pill">Compte</span>
+        </div>
+        <h2>Donner plus d'autonomie sur le compte</h2>
+        <p>
+          Certaines demandes passent encore par un traitement manuel. Ce n'est pas idéal à long terme.
+        </p>
+        <ul>
+          <li>Permettre la suppression du compte directement depuis l'application.</li>
+          <li>Rendre les demandes liées aux données personnelles plus faciles à suivre.</li>
+          <li>Clarifier ce qui est supprimé, conservé ou anonymisé.</li>
+          <li>Réduire la dépendance aux échanges manuels avec l'administrateur.</li>
         </ul>
       </article>
     </section>
@@ -372,8 +335,8 @@
     <section class="closing">
       <h2>Une roadmap volontairement sobre</h2>
       <p>
-        Le but n'est pas d'empiler des fonctionnalités. Le but est de rendre l'alpha plus stable,
-        plus lisible et plus sûre avant d'ouvrir Murmely plus largement.
+        Le but n'est pas d'empiler des fonctionnalités. Le but est de garder Murmely stable,
+        lisible et sûr avant d'élargir l'accès.
       </p>
     </section>
 
