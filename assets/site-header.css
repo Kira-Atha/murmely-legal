@@ -100,17 +100,30 @@
 }
 
 .presentation .hero {
-  min-height: 0;
-  padding: 48px 16px 36px;
+  padding: 44px 0 24px;
+  text-align: left;
+}
+
+.presentation .hero-inner {
+  max-width: 880px;
 }
 
 .presentation .hero h1 {
-  font-size: 4.5rem;
+  margin: 0;
+  font-size: 3.25rem;
+  line-height: 1.15;
   letter-spacing: 0;
 }
 
+.presentation .hero h1 span {
+  color: #6040bf;
+}
+
 .presentation .tagline {
-  font-size: 1.3rem;
+  max-width: 640px;
+  margin: 22px 0 0;
+  color: #6b5680;
+  font-size: 1.1875rem;
 }
 
 @media (max-width: 1000px) {
@@ -156,11 +169,11 @@
   }
 
   .presentation .hero {
-    padding: 24px 0 18px;
+    padding: 20px 0 12px;
   }
 
   .presentation .hero h1 {
-    font-size: 2.75rem;
+    font-size: 2rem;
   }
 
   .presentation .tagline {
