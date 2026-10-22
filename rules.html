@@ -257,7 +257,7 @@
         Un cadre simple pour garder des discussions calmes, respectueuses et consenties.
       </p>
       <div class="meta" aria-label="Métadonnées de la page">
-        <span class="pill">Dernière mise à jour : 20 juillet 2026</span>
+        <span class="pill">Dernière modification : 22 octobre 2026</span>
         <span class="pill">Application : Murmely</span>
         <span class="pill">Alpha fermée</span>
       </div>
@@ -312,15 +312,23 @@
       <section>
         <h2>Signalements</h2>
         <p>
-          Les utilisateurs peuvent signaler un sujet, un message ou un comportement problématique.
+          Tu peux signaler un sujet phare ou une personne depuis une conversation.
+          Dans une conversation, joins de 1 à 10 messages ; le motif écrit est facultatif.
+          Pour un sujet phare, le motif est obligatoire.
         </p>
         <p>
-          Les signalements sont vérifiés par l'administrateur, avec contexte.
-          Un signalement n'entraîne donc pas automatiquement une sanction.
+          L'aperçu montre les messages sélectionnés et jusqu'à deux messages avant et après chacun,
+          provenant des deux personnes. Seuls ces éléments et leur contexte limité sont transmis ;
+          la modération ne peut pas parcourir librement tes conversations personnelles.
         </p>
         <p>
-          Les comportements toxiques répétés ou graves peuvent toutefois mener à une restriction
-          ou à un bannissement du compte.
+          Les modérateurs et administrateurs habilités examinent les dossiers dans lesquels ils ne sont ni signalants ni signalés.
+          Un signalement concernant un membre de l'équipe est traité par un administrateur non impliqué.
+          Aucun signalement n'entraîne de sanction automatique.
+        </p>
+        <p>
+          Dans « Blocages et signalements », tu peux débloquer une personne ou suivre tes signalements :
+          ton message, leur statut et les dates de suivi. Les notes internes et l'identité des intervenants n'y apparaissent pas.
         </p>
       </section>
 
@@ -331,8 +339,79 @@
           <li>verrouiller une conversation ;</li>
           <li>bloquer certaines interactions ;</li>
           <li>suspendre ou bannir un compte ;</li>
-          <li>conserver les éléments nécessaires à l'analyse d'un signalement pendant la durée utile.</li>
+          <li>examiner les éléments joints avant toute décision, sans sanction automatique liée au nombre de signalements.</li>
         </ul>
+      </section>
+
+      <section class="full">
+        <h2>Conservation des signalements</h2>
+        <p>
+          Les copies des messages, leur contexte, les sujets phares copiés et les pseudos nécessaires au dossier
+          et à son historique sont conservés pendant le traitement, puis 180 jours après clôture.
+          Cela reste vrai après suppression d'un compte, y compris celui d'un administrateur ou d'un modérateur.
+        </p>
+        <p>
+          À échéance, contenus et identités ne sont plus consultables ni recherchables. Le nettoyage automatique
+          efface leurs copies et les motifs internes. Seules les traces de traitement (actions, dates et statuts) restent conservées,
+          sans pseudos ni références aux comptes. La purge passe au démarrage de l'API, puis toutes les 24 heures,
+          par lots de 100 ; une indisponibilité peut la retarder sans rétablir l'accès.
+        </p>
+        <p>
+          Ces 180 jours sont une règle choisie par Murmely, pas une durée imposée par le RGPD.
+          Ils ne fixent pas la conservation de tous tes messages ou de toutes les données du compte.
+        </p>
+      </section>
+
+      <section class="full">
+        <h2>Échanger avec l'équipe Murmely</h2>
+        <p>
+          En envoyant une demande depuis « Nous contacter », tu peux être contacté dans l'application
+          par un administrateur pour obtenir des précisions ou te répondre. Tu en es averti avant l'envoi.
+          Tu peux suivre le traitement dans « Mes demandes ».
+        </p>
+        <p>
+          Cet échange lié à ta demande apparaît sous l'identité « Équipe Murmely », sans exposer le pseudo,
+          le profil ou l'identifiant personnels de l'administrateur. Seul l'administrateur responsable peut t'écrire,
+          et uniquement si la demande est en cours de traitement.
+        </p>
+        <p>
+          Le canal reste possible malgré un blocage personnel entre vos comptes. Tu ne peux pas bloquer
+          l'identité officielle, mais tu peux signaler ses messages à un autre administrateur non impliqué.
+          L'administrateur signalé ne peut ni consulter ni traiter ce dossier. Le signalement ne bloque pas l'échange.
+        </p>
+        <p>
+          Tant que la demande est ouverte, le responsable peut verrouiller ou déverrouiller la conversation.
+          Les autres administrateurs habilités restent en lecture seule. Un verrouillage empêche tout nouvel envoi,
+          sans effacer l'historique ; un blocage ou déblocage personnel n'y change rien.
+          Verrouiller l'échange et clôturer la demande sont deux actions distinctes.
+        </p>
+        <p>
+          Une demande clôturée ne peut plus changer de statut. Sa conversation reste définitivement en lecture seule,
+          sans reprise, déverrouillage ni nouvel envoi, même par un autre administrateur.
+          Si le compte du responsable est supprimé, une reprise explicite reste possible uniquement pour une demande encore ouverte.
+        </p>
+        <p>
+          Les auteurs réels, dates des messages et actions de suivi sont tracés en interne.
+          Les notes internes et copies des pseudos d'administrateurs supprimés sont conservées pendant le traitement,
+          puis 180 jours après clôture, avant leur purge. Ce délai n'est pas étendu à tous les échanges de support.
+        </p>
+      </section>
+
+      <section class="full">
+        <h2>Supprimer ton compte</h2>
+        <p>
+          Depuis Profil → Gestion du compte, tu peux demander la suppression définitive après confirmation de ton mot de passe.
+          Ton accès est bloqué dès l'enregistrement. Ton profil, tes sujets phares et tes messages personnels envoyés sont effacés.
+        </p>
+        <p>
+          Tes interlocuteurs conservent uniquement leurs propres messages, en lecture seule sous « Compte supprimé ».
+          Quand les deux comptes sont supprimés, leur relation personnelle est effacée.
+          Les éléments des signalements suivent la conservation indiquée plus haut.
+        </p>
+        <p>
+          Retrouve le détail et l'assistance hors connexion sur la
+          <a href="account-deletion.html">page de suppression de compte</a> de murmely.be.
+        </p>
       </section>
     </div>
 

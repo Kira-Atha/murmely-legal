@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://murmely.be/presentation.html</loc>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://murmely.be/roadmap.html</loc>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://murmely.be/rules.html</loc>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://murmely.be/privacy.html</loc>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://murmely.be/account-deletion.html</loc>
+    <lastmod>2026-10-22</lastmod>
   </url>
 </urlset>

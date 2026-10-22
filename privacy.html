@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Murmely - Privacy Policy</title>
+  <title>Murmely - Politique de confidentialité</title>
   <link rel="canonical" href="https://murmely.be/privacy.html">
-  <meta name="description" content="Privacy Policy for the Murmely mobile application.">
+  <meta name="description" content="Les données utilisées par Murmely, leur conservation, la modération et tes droits sur ton compte.">
   <style>
     :root {
       color-scheme: light;
@@ -312,265 +312,364 @@
   <main class="page">
     <header class="hero">
       <div class="logo" aria-hidden="true">&#10022;</div>
-      <h1>Murmely Privacy Policy</h1>
+      <h1>Confidentialité Murmely</h1>
       <p class="subtitle">
-        Murmely is a mobile application designed to help people start calmer, consent-based conversations
-        around a chosen discussion topic. This policy explains what data is processed, why it is processed,
-        and how long it is kept.
+        Ce que Murmely utilise pour faire fonctionner tes échanges, pourquoi ces données sont nécessaires
+        et ce qu'elles deviennent quand tu supprimes ton compte.
       </p>
-      <div class="meta" aria-label="Policy metadata">
-        <span class="pill">Last updated: October 18, 2026</span>
-        <span class="pill">Application: Murmely</span>
+      <div class="meta" aria-label="Métadonnées de la page">
+        <span class="pill">Dernière modification : 22 octobre 2026</span>
+        <span class="pill">Application : Murmely</span>
         <span class="pill">Package: be.huygebaertgabriel.murmely</span>
       </div>
-      <div class="actions" aria-label="Main navigation">
-        <a class="button" href="presentation.html">Presentation</a>
+      <div class="actions" aria-label="Navigation principale">
+        <a class="button" href="presentation.html">Présentation</a>
         <a class="button" href="rules.html">Règlement</a>
-        <a class="button" href="account-deletion.html">Account deletion</a>
+        <a class="button" href="account-deletion.html">Suppression de compte</a>
       </div>
     </header>
 
     <div class="stars" aria-hidden="true">&#10022; &#10023; &#10022;</div>
 
     <article class="summary">
-      <h2>Short version</h2>
+      <h2>En résumé</h2>
       <p>
-        Murmely only processes data required to operate the service: account data, optional profile data,
-        featured discussion topics, discussion requests, questionnaire answers, consent decisions,
-        conversations, safety reports, blocks, contact requests and technical logs.
+        Murmely utilise les données nécessaires au service : compte, profil, sujets phares, demandes,
+        réponses aux questionnaires, consentements, messages, blocages, signalements, contacts et journaux techniques.
       </p>
       <p>
-        Murmely does not sell personal data and does not use personal data for targeted advertising.
+        Tes données ne sont pas vendues et ne servent pas à la publicité ciblée.
       </p>
       <p class="notice">
-        Some conversation content is protected at rest in the database. However, when a report is submitted
-        or moderation is required, the administrator may access the information necessary to review the report
-        and protect users.
+        La modération consulte les éléments joints aux signalements et leur contexte limité.
+        Elle ne dispose pas d'un accès général à tes conversations personnelles.
       </p>
     </article>
 
     <div class="grid">
       <section>
-        <h2>1. Data controller</h2>
+        <h2>1. Responsable du traitement</h2>
         <p>
-          Murmely is currently administered by its creator. The creator is responsible for the technical operation
-          of the application, account management, support requests and moderation follow-up.
-          As the number of users grows, other people may also be appointed as administrators.
+          Le créateur de Murmely est responsable du fonctionnement technique, de la gestion des comptes,
+          de l'assistance et du suivi de la modération. D'autres personnes de confiance peuvent être
+          habilitées comme administrateurs ou modérateurs, avec des droits distincts.
         </p>
         <p>
-          For privacy-related requests, you may use the in-app contact form when logged in, or contact:
+          Pour une question sur tes données, utilise « Nous contacter » si tu es connecté, ou écris à
           <a href="mailto:contact@murmely.be">contact@murmely.be</a>.
         </p>
       </section>
 
       <section>
-        <h2>2. Legal basis</h2>
-        <p>Murmely processes personal data on the following legal bases:</p>
+        <h2>2. Pourquoi ces données sont utilisées</h2>
+        <p>Murmely s'appuie sur les bases suivantes :</p>
         <ul>
-          <li><strong>Contractual necessity</strong>, to create an account, authenticate users and provide the core service.</li>
-          <li><strong>Legitimate interest</strong>, to secure the service, prevent abuse, maintain stability and process reports.</li>
-          <li><strong>Legal obligation</strong>, if a competent authority requires information under applicable law.</li>
-          <li><strong>User choice</strong>, for optional profile fields that users decide to complete.</li>
+          <li><strong>L'exécution du service</strong>, pour créer ton compte, te connecter et permettre les échanges.</li>
+          <li><strong>L'intérêt légitime</strong>, pour sécuriser le service, prévenir les abus et traiter les signalements.</li>
+          <li><strong>Une obligation légale</strong>, lorsqu'une autorité compétente demande des informations dans le cadre applicable.</li>
         </ul>
+        <p>Les champs facultatifs du profil restent à ton choix.</p>
       </section>
 
       <section class="full">
-        <h2>3. Data processed by Murmely</h2>
+        <h2>3. Les données utilisées</h2>
 
-        <h3>Account and authentication data</h3>
+        <h3>Compte et connexion</h3>
         <p>
-          Murmely stores a username, normalized username, email address, normalized email address,
-          user role, hashed password, creation date and update date. Passwords are not stored in plain text.
-          The email address is also stored to allow password recovery when a user forgets their password.
+          Murmely conserve ton pseudo, ton adresse e-mail, leurs versions normalisées, ton rôle,
+          les dates du compte et une empreinte de ton mot de passe. Le mot de passe n'est pas conservé en clair.
+          Ton e-mail sert notamment à vérifier ton inscription et à réinitialiser ton mot de passe.
         </p>
         <p>
-          Authentication uses access tokens and refresh tokens. Refresh tokens are stored only as hashes
-          on the server side.
+          Des jetons permettent de maintenir ta connexion. Les jetons de renouvellement sont stockés
+          sous forme d'empreintes côté serveur.
         </p>
 
-        <h3>Optional profile data</h3>
+        <h3>Profil</h3>
         <p>
-          Users may choose to provide an age, biography, social energy, relational expectations and personality tags.
-          These fields help other users understand the context of an exchange. They are optional unless explicitly
-          required by a specific feature.
+          L'âge, la bio, l'énergie sociale, les attentes relationnelles et les traits de personnalité
+          donnent du contexte à tes échanges. L'ordre que tu choisis pour tes tags est également conservé.
         </p>
 
-        <h3>Featured discussion topics and questionnaires</h3>
+        <h3>Sujets phares et questionnaires</h3>
         <p>
-          When a user creates a featured discussion topic, Murmely stores its title, description, selected image,
-          questionnaire questions, answer options and the creator's selected answers. This allows other users to
-          understand the topic before deciding whether they are interested.
+          Murmely conserve le titre, la description, l'image choisie, les questions et les réponses de ton sujet phare.
+          Ces éléments permettent aux autres de comprendre ton invitation à discuter.
         </p>
 
-        <h3>Discussion requests and mutual consent</h3>
+        <h3>Demandes et consentements</h3>
         <p>
-          When a user indicates interest in a topic, Murmely stores a discussion request, its status,
-          questionnaire answers and consent decisions. A conversation is created only when both participants consent.
+          Une demande conserve son statut, les réponses au questionnaire et les décisions des deux personnes.
+          Une conversation personnelle ne s'ouvre qu'avec leur consentement mutuel.
         </p>
 
-        <h3>Conversations and messages</h3>
+        <h3>Conversations et messages</h3>
         <p>
-          When a conversation is opened, Murmely stores the conversation and messages exchanged between participants.
-          This allows users to continue the exchange later. Message content is protected at rest in the database
-          to reduce direct exposure of conversation data.
+          Les messages et les informations de lecture permettent de reprendre tes échanges.
+          Le contenu des messages est protégé au repos dans la base de données.
+          Sur Android, les bulles réutilisent tes conversations ; elles nécessitent les autorisations de notifications et de bulles du téléphone.
         </p>
 
-        <h3>Safety, blocks and reports</h3>
+        <h3>Blocages et signalements</h3>
         <p>
-          Murmely stores user blocks, user reports, report reasons, report source information and moderation status.
-          This is necessary to prevent blocked users from restarting interactions and to allow reports to be reviewed.
+          Murmely conserve les blocages, les signalements, leur provenance, leur motif éventuel,
+          leur statut et les éléments joints. Les pseudos nécessaires sont copiés dans le dossier,
+          avec l'historique des interventions et les consultations d'éléments privés.
         </p>
 
-        <h3>Contact requests</h3>
+        <h3>Demandes de contact</h3>
         <p>
-          Murmely stores contact requests submitted from the application, including the selected request type,
-          message, status and processing date. This can include requests about personal data or account deletion.
+          « Nous contacter » conserve le motif, ton message, le statut et les dates de suivi.
+          Un échange avec l'équipe peut être lié à cette demande. Son fonctionnement est décrit en partie 10.
         </p>
 
-        <h3>Technical logs</h3>
+        <h3>Journaux techniques</h3>
         <p>
-          Murmely stores technical logs to diagnose errors, investigate incidents and maintain service stability.
-          Logs may include technical routes, response status, execution time, correlation identifiers and diagnostic
-          information. Logs should not contain passwords, message content, biographies or report reasons in plain text.
+          Les journaux servent à comprendre les erreurs et les incidents : route appelée, résultat, durée et identifiant de corrélation.
+          Ils ne sont pas destinés à contenir tes mots de passe, messages, bio ou motifs de signalement en clair.
         </p>
       </section>
 
       <section class="full">
-        <h2>4. Retention periods</h2>
+        <h2>4. Durées de conservation</h2>
         <table class="retention-table">
           <thead>
             <tr>
-              <th>Data category</th>
-              <th>Retention period</th>
-              <th>Reason</th>
+              <th>Données</th>
+              <th>Conservation</th>
+              <th>Utilité</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td data-label="Data category">Account data</td>
-              <td data-label="Retention period">Kept while the account is active.</td>
-              <td data-label="Reason">Required to provide access to the application and identify the user's space.</td>
+              <td data-label="Données">Compte et profil</td>
+              <td data-label="Conservation">Pendant la vie du compte, jusqu'à leur modification ou à sa suppression.</td>
+              <td data-label="Utilité">Te connecter et afficher les informations de profil que tu as choisies.</td>
             </tr>
             <tr>
-              <td data-label="Data category">Profile data</td>
-              <td data-label="Retention period">Kept while the account is active, unless the user edits or requests deletion.</td>
-              <td data-label="Reason">Required to display the profile context chosen by the user.</td>
+              <td data-label="Données">Blocages</td>
+              <td data-label="Conservation">Jusqu'au déblocage ou à la suppression de l'un des comptes concernés.</td>
+              <td data-label="Utilité">Respecter les limites posées dans les relations personnelles.</td>
             </tr>
             <tr>
-              <td data-label="Data category">Access tokens</td>
-              <td data-label="Retention period">30 minutes.</td>
-              <td data-label="Reason">Short-lived authentication token used to access the API.</td>
+              <td data-label="Données">Jetons d'accès</td>
+              <td data-label="Conservation">30 minutes. L'accès est refusé dès l'enregistrement d'une suppression de compte.</td>
+              <td data-label="Utilité">Authentifier les appels à l'application.</td>
             </tr>
             <tr>
-              <td data-label="Data category">Refresh tokens</td>
-              <td data-label="Retention period">Up to 30 days, unless revoked earlier.</td>
-              <td data-label="Reason">Used to keep a session active without asking the user to log in repeatedly.</td>
+              <td data-label="Données">Jetons de renouvellement</td>
+              <td data-label="Conservation">Jusqu'à 30 jours, sauf révocation ou suppression du compte avant ce terme.</td>
+              <td data-label="Utilité">Maintenir ta session sans redemander ton mot de passe.</td>
             </tr>
             <tr>
-              <td data-label="Data category">Password reset codes</td>
-              <td data-label="Retention period">30 minutes. Previous active codes are invalidated when a new request is created.</td>
-              <td data-label="Reason">Limits the validity window of account recovery codes.</td>
+              <td data-label="Données">Codes de réinitialisation</td>
+              <td data-label="Conservation">Validité de 30 minutes. Une nouvelle demande invalide les anciens codes actifs.</td>
+              <td data-label="Utilité">Limiter l'utilisation des codes de récupération du compte.</td>
             </tr>
             <tr>
-              <td data-label="Data category">Technical logs</td>
-              <td data-label="Retention period">Maximum 30 days, except where needed for security, abuse investigation or legal requirements.</td>
-              <td data-label="Reason">Allows troubleshooting and incident investigation without keeping logs indefinitely.</td>
+              <td data-label="Données">Journaux techniques</td>
+              <td data-label="Conservation">30 jours maximum, sauf nécessité liée à un incident de sécurité, un abus ou une obligation légale.</td>
+              <td data-label="Utilité">Diagnostiquer les incidents et protéger le service.</td>
             </tr>
             <tr>
-              <td data-label="Data category">Reports and blocks</td>
-              <td data-label="Retention period">Kept as long as needed to protect users, prevent repeated abuse and document moderation decisions.</td>
-              <td data-label="Reason">Required for safety and moderation consistency.</td>
+              <td data-label="Données">Preuves et données personnelles des signalements</td>
+              <td data-label="Conservation">Pendant le traitement, puis 180 jours après clôture. Détails en partie 9.</td>
+              <td data-label="Utilité">Examiner le signalement et conserver le contexte du traitement.</td>
             </tr>
             <tr>
-              <td data-label="Data category">Conversations and messages</td>
-              <td data-label="Retention period">Kept while the account and conversation are active, unless deletion is requested or retention is required for moderation or legal reasons.</td>
-              <td data-label="Reason">Required to display conversation history and support moderation where applicable.</td>
+              <td data-label="Données">Conversations personnelles</td>
+              <td data-label="Conservation">Consultables tant que les comptes existent. Après suppression d'un compte, l'autre conserve uniquement ses propres messages en lecture seule. Quand les deux comptes sont supprimés, leur relation est effacée.</td>
+              <td data-label="Utilité">Conserver ton propre historique sans maintenir le compte supprimé.</td>
             </tr>
             <tr>
-              <td data-label="Data category">Contact requests</td>
-              <td data-label="Retention period">Kept as long as needed to process and document the request.</td>
-              <td data-label="Reason">Required for support, privacy requests and follow-up.</td>
+              <td data-label="Données">Demandes de contact et échanges avec l'équipe</td>
+              <td data-label="Conservation">Pour le traitement et le suivi de la demande. La règle des 180 jours ne fixe pas une durée générale pour ces échanges ; voir la partie 10.</td>
+              <td data-label="Utilité">Te répondre et garder le suivi de l'assistance.</td>
+            </tr>
+            <tr>
+              <td data-label="Données">Notes internes des contacts et copies des pseudos d'administrateurs supprimés</td>
+              <td data-label="Conservation">Pendant le traitement, puis 180 jours après clôture de la demande.</td>
+              <td data-label="Utilité">Garder la trace des interventions pendant le suivi autorisé.</td>
+            </tr>
+            <tr>
+              <td data-label="Données">Traces de traitement des signalements après purge</td>
+              <td data-label="Conservation">Les actions, dates et statuts restent conservés, sans pseudos, références aux comptes ni motifs internes.</td>
+              <td data-label="Utilité">Conserver l'historique technique des décisions sans les données personnelles du dossier.</td>
             </tr>
           </tbody>
         </table>
       </section>
 
       <section>
-        <h2>5. Hosting and processors</h2>
+        <h2>5. Hébergement et prestataires</h2>
         <p>
-          Murmely may use Render to host the API and PostgreSQL database infrastructure. In that context,
-          Render acts as a technical hosting provider and processes data only to provide the infrastructure
-          required for the service.
+          Render peut héberger l'API et la base PostgreSQL. Il intervient comme prestataire technique
+          pour fournir l'infrastructure du service.
         </p>
         <p>
-          Murmely may also use an email provider to send operational emails, such as password reset messages.
-        </p>
-      </section>
-
-      <section>
-        <h2>6. Security measures</h2>
-        <p>
-          Murmely uses authentication tokens, hashed passwords, server-side secrets, refresh token revocation,
-          short-lived password reset codes and database-level protection for conversation message content.
-        </p>
-        <p>
-          No security measure is absolute. Murmely applies reasonable technical measures proportionate to the
-          current alpha stage of the service.
+          Un prestataire de messagerie permet aussi d'envoyer les e-mails utiles au compte,
+          comme les codes de vérification ou de réinitialisation.
         </p>
       </section>
 
       <section>
-        <h2>7. Sensitive data</h2>
+        <h2>6. Sécurité</h2>
         <p>
-          Murmely does not intentionally request sensitive data such as ethnic origin, political opinions,
-          religion, health data, sexual orientation or biometric data.
+          Murmely utilise des mots de passe sous forme d'empreintes, des jetons de connexion révocables,
+          des codes à durée limitée et une protection des messages au repos.
+          Les droits de l'équipe sont vérifiés côté serveur.
         </p>
         <p>
-          Some fields are free text, such as biography, topics, messages, reports and contact requests.
-          Users should avoid entering sensitive information in those fields.
+          Aucune mesure de sécurité n'est absolue. Le service continue d'être renforcé pendant l'alpha.
         </p>
       </section>
 
       <section>
-        <h2>8. User rights</h2>
+        <h2>7. Données sensibles</h2>
         <p>
-          Subject to applicable law, users may request access to their personal data, rectification, deletion,
-          restriction of processing, portability or objection to certain processing based on legitimate interest.
+          Murmely ne te demande pas de renseigner ton origine, tes opinions politiques, ta religion,
+          ta santé, ton orientation sexuelle ou des données biométriques.
         </p>
         <p>
-          Account deletion is not yet fully automated in the application. Users may request account or data deletion
-          through the in-app contact form or by contacting the address listed in this policy.
+          La bio, les sujets, les messages et les demandes sont des champs libres.
+          Évite d'y partager des informations sensibles, sur toi ou sur une autre personne.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Tes droits et la suppression du compte</h2>
+        <p>
+          Tu peux demander l'accès à tes données, leur correction, leur effacement, la limitation de leur utilisation,
+          leur portabilité ou t'opposer à certains traitements, dans les conditions du droit applicable.
+        </p>
+        <p>
+          Pour supprimer ton compte, ouvre <strong>Profil → Gestion du compte</strong> et confirme ton mot de passe.
+          La suppression est définitive. Ton accès est bloqué dès l'enregistrement de la demande.
+          Ton profil, tes informations de connexion, tes sujets phares et tes messages personnels envoyés sont effacés.
+        </p>
+        <p>
+          Tes interlocuteurs conservent uniquement leurs propres messages dans les échanges personnels,
+          en lecture seule sous « Compte supprimé », sans pouvoir t'écrire ni consulter ton profil.
+          Quand les deux comptes sont supprimés, les données de leur relation personnelle sont effacées.
+          Une nouvelle inscription ne récupère pas tes anciens échanges.
+        </p>
+        <p>
+          Les éléments nécessaires aux signalements suivent la conservation décrite ci-dessous.
+          Les conversations avec l'équipe suivent le traitement distinct de la partie 10.
+          La <a href="account-deletion.html">page de suppression de compte</a> détaille le parcours
+          et les moyens d'assistance hors connexion sur murmely.be.
+        </p>
+        <p>
+          L'effacement des sauvegardes dépend de leur cycle d'expiration : il n'est pas annoncé comme immédiat.
+          Cette page ne garantit pas qu'une restauration filtre automatiquement les comptes supprimés.
         </p>
       </section>
 
       <section class="full">
-        <h2>9. Moderation access</h2>
+        <h2>9. Signalements et modération</h2>
         <p>
-          Murmely is built around mutual consent and safer exchanges. If a user reports another user, a conversation,
-          or a featured topic, the administrator may review the information necessary to assess the report.
+          Depuis une conversation, tu sélectionnes de 1 à 10 messages. Jusqu'à deux messages avant et après chacun,
+          provenant des deux participants, peuvent être ajoutés pour le contexte. L'aperçu montre les éléments transmis
+          avant confirmation. Au moins un message est obligatoire ; le motif écrit reste facultatif.
         </p>
         <p>
-          This review may include profile information, the reported topic, report reason, conversation context,
-          and messages relevant to the report. This access is limited to moderation, user safety, abuse prevention
-          and legal compliance.
+          Pour un sujet phare, un motif est obligatoire et une copie du contenu signalé est conservée.
+          Les extraits sont constitués côté serveur à partir des vrais contenus, puis figés pour le dossier.
+          La modération ne peut pas parcourir librement tes conversations personnelles.
+        </p>
+        <p>
+          Seuls les modérateurs et administrateurs habilités, qui ne sont ni signalants ni signalés dans le dossier,
+          peuvent le consulter ou le traiter. Un signalement concernant un membre de l'équipe est réservé
+          aux administrateurs non impliqués. Un signalement ne déclenche aucune sanction automatique.
+        </p>
+        <p>
+          Le dossier conserve les pseudos du signalant et du signalé, ainsi que les pseudos nécessaires à l'historique
+          des interventions et des consultations d'éléments privés. Les actions, responsables, dates et motifs internes
+          sont tracés. Les anciennes interventions ne sont pas réécrites. Ton suivi dans « Mes signalements » montre
+          ton message, le statut, sa description et les dates de suivi, mais pas les notes internes ni l'identité des intervenants.
+        </p>
+        <h3>180 jours après clôture</h3>
+        <p>
+          Les copies des messages, leur contexte, les sujets phares copiés et les données personnelles du dossier
+          et de son historique sont conservés pendant le traitement, puis <strong>180 jours après sa clôture</strong>.
+          Les pseudos restent lisibles durant ce délai, même si le compte a été supprimé, y compris celui d'un modérateur
+          ou d'un administrateur. Il ne s'agit pas de données anonymisées.
+          Cette durée est une règle choisie par Murmely, pas une durée imposée par le RGPD.
+        </p>
+        <p>
+          À échéance, les contenus et identités deviennent inaccessibles et ne sont plus recherchables.
+          Le nettoyage supprime les copies, leur index de recherche, les pseudos, les références aux comptes et les motifs internes.
+          Seules les traces de traitement (actions, dates et statuts) restent conservées, sans ces données personnelles.
+        </p>
+        <p>
+          Le nettoyage passe au démarrage de l'API, puis toutes les 24 heures pendant son fonctionnement, par lots de 100.
+          Une indisponibilité peut retarder la suppression physique, sans rétablir la consultation ou la recherche des éléments expirés.
+          Cette purge ne supprime pas les messages ou sujets d'origine : ils suivent leurs propres règles, notamment en cas de suppression du compte.
         </p>
       </section>
 
       <section class="full">
-        <h2>10. Changes to this policy</h2>
+        <h2>10. Demandes de contact et équipe Murmely</h2>
         <p>
-          This policy may be updated as Murmely evolves, especially before a wider production release.
-          Material changes will be reflected on this page by updating the date at the top.
+          Avant l'envoi d'une demande « Nous contacter », tu es averti qu'un administrateur peut te contacter
+          directement dans Murmely pour demander des précisions ou te répondre. Tu retrouves ta demande et son statut
+          dans « Mes demandes ».
+        </p>
+        <p>
+          L'échange est lié à cette demande et apparaît sous l'identité <strong>Équipe Murmely</strong>.
+          Le pseudo, le profil et l'identifiant personnels de l'administrateur ne te sont pas exposés.
+          Il ne peut pas utiliser ce canal sans demande existante, ni te contacter si la demande n'est pas en cours de traitement.
+        </p>
+        <p>
+          Ce canal est distinct des relations personnelles : un blocage entre vos comptes n'empêche pas cet échange.
+          Tu ne peux pas bloquer l'identité officielle, mais tu peux signaler un comportement en joignant des messages.
+          Ce signalement est réservé à un autre administrateur non impliqué ; l'administrateur concerné n'y a pas accès.
+          Le signalement ne bloque pas la conversation.
+        </p>
+        <p>
+          Seul l'administrateur responsable peut écrire au nom de l'équipe et verrouiller ou déverrouiller l'échange,
+          tant que la demande n'est pas clôturée. Les autres administrateurs habilités peuvent le consulter en lecture seule.
+          Quand la conversation est verrouillée, personne ne peut envoyer de message, mais l'historique reste lisible.
+          Un blocage ou déblocage personnel ne change pas cet état.
+        </p>
+        <p>
+          Verrouiller l'échange ne clôture pas automatiquement la demande. En revanche,
+          <strong>la clôture d'une demande est définitive</strong> : son statut ne peut plus changer et sa conversation reste
+          en lecture seule, sans reprise, déverrouillage ni nouvel envoi, même par un autre administrateur.
+        </p>
+        <p>
+          L'identité réelle des auteurs et les dates des messages sont conservées en interne. Les ouvertures,
+          premiers contacts, verrouillages, déverrouillages et changements de statut sont tracés.
+          Les notes internes et les identités personnelles des administrateurs ne figurent pas dans « Mes demandes ».
+        </p>
+        <p>
+          Si tu supprimes ton compte, le contenu de ta demande est effacé et la demande est clôturée.
+          Si le compte de l'administrateur responsable est supprimé, un autre administrateur peut reprendre explicitement
+          l'échange uniquement si la demande est encore ouverte. Aucun compte de remplacement n'est créé.
+        </p>
+        <p>
+          Les notes internes de traitement et les copies des pseudos d'administrateurs supprimés restent conservées
+          pendant le traitement, puis 180 jours après clôture. Elles sont ensuite rendues inaccessibles et purgées.
+          Les traces techniques du traitement restent conservées. Ce délai ne s'applique pas à l'ensemble des messages
+          avec l'équipe : aucune nouvelle durée générale pour ces échanges n'est fixée ici.
+        </p>
+      </section>
+
+      <section class="full">
+        <h2>11. Évolution de cette politique</h2>
+        <p>
+          Cette page évolue avec Murmely. La date de dernière modification est indiquée en haut,
+          pour te permettre de repérer les changements.
         </p>
       </section>
     </div>
 
     <footer>
       <p>
-        Murmely - calm, consent-based conversations.
-        · <a href="presentation.html">Presentation</a>
+        Murmely - conversations calmes, consenties et choisies.
+        · <a href="presentation.html">Présentation</a>
         · <a href="rules.html">Règlement</a>
-        · <a href="account-deletion.html">Account deletion</a>
+        · <a href="account-deletion.html">Suppression de compte</a>
       </p>
     </footer>
   </main>
