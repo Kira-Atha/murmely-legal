@@ -42,18 +42,6 @@
       text-align: center;
     }
 
-    .logo {
-      width: 74px;
-      height: 74px;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(145deg, #f8eaf4, #ede4ff);
-      color: var(--accent);
-      font-size: 28px;
-      font-weight: 900;
-    }
-
     h1 {
       margin: 0;
       font-size: 1.45rem;
@@ -87,10 +75,11 @@
     }
   </style>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+  <link rel="icon" type="image/png" href="assets/murmely-logo.png?v=1">
 </head>
 <body>
   <main>
-    <div class="logo" aria-hidden="true">&#10022;</div>
+    <img src="assets/murmely-logo.png" width="96" height="72" alt="Murmely">
     <h1>Vérification</h1>
     <p>Validation anti-abus en cours.</p>
     <div id="turnstile-widget" class="turnstile-box"></div>

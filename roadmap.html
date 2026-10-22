@@ -46,21 +46,6 @@
       padding: 36px 0 64px;
     }
 
-    .topbar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      margin-bottom: 42px;
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
     .button {
       display: inline-flex;
       align-items: center;
@@ -228,23 +213,32 @@
         grid-template-columns: 1fr;
       }
 
-      .topbar {
-        align-items: flex-start;
-      }
     }
   </style>
+  <link rel="icon" type="image/png" href="assets/murmely-logo.png?v=1">
+  <link rel="stylesheet" href="assets/site-header.css?v=1">
 </head>
 <body>
-  <main class="page">
-    <header class="topbar">
-      <nav class="nav" aria-label="Navigation principale">
-        <a class="button" href="presentation.html">Présentation</a>
-        <a class="button" href="presentation.html#releases">Releases</a>
-        <a class="button" href="rules.html">Règlement</a>
-        <a class="button primary" href="presentation.html#alpha">Rejoindre l'alpha</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="presentation.html">
+        <img src="assets/murmely-logo.png" width="640" height="480" alt="">
+        <span>Murmely</span>
+      </a>
+      <nav class="site-primary-nav" aria-label="Navigation principale">
+        <a href="presentation.html#fonctionnement">D&#233;couvrir le principe</a>
+        <a href="presentation.html#releases">Voir les releases</a>
+        <a class="site-alpha-link" href="presentation.html#alpha">Rejoindre l'alpha</a>
+        <a href="roadmap.html" aria-current="page">Et ensuite ?</a>
       </nav>
-    </header>
-
+      <nav class="site-secondary-nav" aria-label="Informations et assistance">
+        <a href="rules.html">R&#232;glement</a>
+        <a href="privacy.html">Confidentialit&#233;</a>
+        <a href="account-deletion.html">Suppression de compte</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page">
     <section class="hero">
       <h1>Ce qui est prévu pour la suite</h1>
       <p class="intro">

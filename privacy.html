@@ -49,20 +49,6 @@
       padding: 34px 22px 24px;
     }
 
-    .logo {
-      width: 94px;
-      height: 94px;
-      margin: 0 auto 18px;
-      border-radius: 999px;
-      background: linear-gradient(145deg, #f8eaf4, #ede4ff);
-      display: grid;
-      place-items: center;
-      box-shadow: var(--shadow);
-      color: var(--accent);
-      font-size: 34px;
-      letter-spacing: 2px;
-    }
-
     h1 {
       margin: 0;
       font-size: clamp(2.1rem, 5vw, 4rem);
@@ -92,14 +78,6 @@
       background: rgba(255, 255, 255, 0.72);
       border-radius: 999px;
       padding: 7px 13px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 22px;
     }
 
     .button {
@@ -307,11 +285,31 @@
       }
     }
   </style>
+  <link rel="icon" type="image/png" href="assets/murmely-logo.png?v=1">
+  <link rel="stylesheet" href="assets/site-header.css?v=1">
 </head>
 <body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="presentation.html">
+        <img src="assets/murmely-logo.png" width="640" height="480" alt="">
+        <span>Murmely</span>
+      </a>
+      <nav class="site-primary-nav" aria-label="Navigation principale">
+        <a href="presentation.html#fonctionnement">D&#233;couvrir le principe</a>
+        <a href="presentation.html#releases">Voir les releases</a>
+        <a class="site-alpha-link" href="presentation.html#alpha">Rejoindre l'alpha</a>
+        <a href="roadmap.html">Et ensuite ?</a>
+      </nav>
+      <nav class="site-secondary-nav" aria-label="Informations et assistance">
+        <a href="rules.html">R&#232;glement</a>
+        <a href="privacy.html" aria-current="page">Confidentialit&#233;</a>
+        <a href="account-deletion.html">Suppression de compte</a>
+      </nav>
+    </div>
+  </header>
   <main class="page">
     <header class="hero">
-      <div class="logo" aria-hidden="true">&#10022;</div>
       <h1>Confidentialité Murmely</h1>
       <p class="subtitle">
         Ce que Murmely utilise pour faire fonctionner tes échanges, pourquoi ces données sont nécessaires
@@ -321,11 +319,6 @@
         <span class="pill">Dernière modification : 22 octobre 2026</span>
         <span class="pill">Application : Murmely</span>
         <span class="pill">Package: be.huygebaertgabriel.murmely</span>
-      </div>
-      <div class="actions" aria-label="Navigation principale">
-        <a class="button" href="presentation.html">Présentation</a>
-        <a class="button" href="rules.html">Règlement</a>
-        <a class="button" href="account-deletion.html">Suppression de compte</a>
       </div>
     </header>
 

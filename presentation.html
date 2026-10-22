@@ -73,20 +73,6 @@
       max-width: 860px;
     }
 
-    .logo {
-      width: 118px;
-      height: 118px;
-      margin: 0 auto 22px;
-      border-radius: 999px;
-      background: linear-gradient(145deg, #f8eaf4, #ede4ff);
-      display: grid;
-      place-items: center;
-      box-shadow: var(--shadow);
-      color: var(--accent);
-      font-size: 42px;
-      letter-spacing: 2px;
-    }
-
     h1 {
       margin: 0;
       font-size: clamp(3rem, 8vw, 6.2rem);
@@ -99,14 +85,6 @@
       margin: 22px auto 0;
       color: var(--muted);
       font-size: clamp(1.16rem, 2.3vw, 1.45rem);
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 30px;
     }
 
     .button {
@@ -530,23 +508,37 @@
       }
     }
   </style>
+  <link rel="icon" type="image/png" href="assets/murmely-logo.png?v=1">
+  <link rel="stylesheet" href="assets/site-header.css?v=1">
 </head>
-<body>
+<body class="presentation">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="presentation.html" aria-current="page">
+        <img src="assets/murmely-logo.png" width="640" height="480" alt="">
+        <span>Murmely</span>
+      </a>
+      <nav class="site-primary-nav" aria-label="Navigation principale">
+        <a href="presentation.html#fonctionnement">D&#233;couvrir le principe</a>
+        <a href="presentation.html#releases">Voir les releases</a>
+        <a class="site-alpha-link" href="presentation.html#alpha">Rejoindre l'alpha</a>
+        <a href="roadmap.html">Et ensuite ?</a>
+      </nav>
+      <nav class="site-secondary-nav" aria-label="Informations et assistance">
+        <a href="rules.html">R&#232;glement</a>
+        <a href="privacy.html">Confidentialit&#233;</a>
+        <a href="account-deletion.html">Suppression de compte</a>
+      </nav>
+    </div>
+  </header>
   <main class="page">
     <header class="hero">
       <div class="hero-inner">
-        <div class="logo" aria-hidden="true">&#10022;</div>
         <h1>Murmely</h1>
         <p class="tagline">
           Une application pour ouvrir des conversations plus calmes, plus choisies,
           et plus respectueuses du rythme de chacun.
         </p>
-        <div class="actions">
-          <a class="button" href="#fonctionnement">Découvrir le principe</a>
-          <a class="button" href="#releases">Voir les releases</a>
-          <a class="button primary" href="#alpha">Rejoindre l'alpha</a>
-          <a class="button" href="roadmap.html">Et ensuite ?</a>
-        </div>
       </div>
     </header>
 
